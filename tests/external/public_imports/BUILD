@@ -8,11 +8,11 @@ jsonnet_library(
     srcs = ["a.libsonnet"],
     imports = ["tier2/tier3"],
     visibility = ["//visibility:public"],
-    deps = ["//imports/tier2/tier3:b"],
+    deps = ["//public_imports/tier2/tier3:b"],
 )
 
 jsonnet_library(
     name = "d",
     srcs = ["d.libsonnet"],
-    visibility = ["//imports/tier2:__pkg__"],
+    visibility = ["//public_imports/tier2:__pkg__"],
 )

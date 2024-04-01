@@ -1,5 +1,5 @@
 local d = import 'd.libsonnet';
 
 d {
-  c: 'I am "C." in external.',
+  c: 'I am "C" in external.',
 }

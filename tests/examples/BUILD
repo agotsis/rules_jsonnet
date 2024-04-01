@@ -245,8 +245,8 @@ jsonnet_to_json_test(
 jsonnet_to_json(
     name = "imports_test_external_dep",
     src = "imports.jsonnet",
-    # golden = "imports_golden.json",
-    deps = ["@external//imports:a"],
+    # golden = "imports_external_golden.json",
+    deps = ["@external//public_imports:a"],
     outs = ["ext_imports.json"]
 )
 

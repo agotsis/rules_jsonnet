@@ -7,6 +7,6 @@ jsonnet_library(
     name = "b",
     srcs = ["b.libsonnet"],
     imports = ["../"],
-    deps = ["//imports/tier2:c"],
-    visibility = ["//imports:__pkg__"],
+    deps = ["//public_imports/tier2:c"],
+    visibility = ["//public_imports:__pkg__"],
 )
