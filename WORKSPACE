@@ -4,7 +4,12 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 local_repository(
     name = "examples",
-    path = "examples",
+    path = "tests/examples",
+)
+
+local_repository(
+    name = "external",
+    path = "tests/external",
 )
 
 local_repository(

@@ -1,13 +1,13 @@
 package(default_visibility = ["//visibility:public"])
 
 # This directory contains unit and regression tests that also serve as examples
-# for jsonnet rules.  The BUILD rules should not contain any jsonnet_to_json
-# rules as this is redundant with jsonnet_to_json_test rules.
+# for jsonnet rules.
 
 load(
     "@io_bazel_rules_jsonnet//jsonnet:jsonnet.bzl",
     "jsonnet_library",
     "jsonnet_to_json_test",
+    "jsonnet_to_json",
 )
 
 jsonnet_library(
@@ -240,6 +240,14 @@ jsonnet_to_json_test(
     golden = "imports_golden.json",
     imports = ["imports"],
     deps = ["//imports:a"],
+)
+
+jsonnet_to_json(
+    name = "imports_test_external_dep",
+    src = "imports.jsonnet",
+    # golden = "imports_golden.json",
+    deps = ["@external//imports:a"],
+    outs = ["ext_imports.json"]
 )
 
 jsonnet_to_json_test(

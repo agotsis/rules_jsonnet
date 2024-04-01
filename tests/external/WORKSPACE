@@ -1,0 +1,1 @@
+workspace(name = "another_workspace_to_treat_external")
